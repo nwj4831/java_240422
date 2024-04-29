@@ -1,3 +1,4 @@
+package question;
 import java.util.Scanner;
 
 public class ScannerExArea {
