@@ -1,0 +1,12 @@
+package chapter02;
+
+public class TernaryOperator {
+	public static void main(String[] args) {
+		int a=3, b=5;
+//		a>b 가 거짓이므로 b-a를 변환
+		System.out.println("두 수의 차는 "+((a>b)?(a-b):(b-a)));
+		
+		char d='가', c='나';
+		System.out.println((d < c)?"합격":"불합격");
+	}
+}

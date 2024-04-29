@@ -1,4 +1,4 @@
-package Areacircle;
+package question;
 
 import java.util.Scanner;
 
