@@ -2,34 +2,40 @@ package question02;
 
 import java.util.Scanner;
 
-public class if_elseArithmeticExlf {
+public class swich_ArithmeticEx {
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("연산>>");
 		int a= scanner.nextInt();
 		String c=scanner.next();
 		int b= scanner.nextInt();
-		int res=0;
+		float res=0;
 		scanner.close();
 		
-		if (c.equals("+")) {
+		switch (c) {
+		case ("+"):
 			res = a + b;
-		}else if (c.equals("-")){
-			res = a-b;
-		}else if (c.equals("*")){
-			res = a*b;
-		}else if(c.equals("/")) {
+			break;
+		case "-":
+			res = a - b;
+			break;
+		case "*":
+			res = a * b;
+			break;
+		case "/":
 			if (b == 0) {
 				System.out.println("0으로 나눌 수 없습니다.");
-				//프로그램 종료
 				return;
 			}else {
 				res = a/b;				
 			}
-		}else {
-			System.out.println("입력 오류");
+			break;
+
+		default:
+			System.out.println("사칙연산이 아닙니다");
+//			break;
 			return;
-		}
+		}		
 		System.out.println(a+c+b+"의 계산결과는"+res);
 	}
 	
