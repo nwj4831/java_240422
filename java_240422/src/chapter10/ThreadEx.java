@@ -1,0 +1,32 @@
+package chapter10;
+
+class ThreadEx1 extends Thread{
+	@Override
+	public void run() {
+		for (int i = 0; i < 5; i++) {
+			System.out.println("i:"+i);
+		}
+	}
+}
+//class ThreadEx1 extends Thread{
+class ThreadEx2 implements Runnable{
+	@Override
+	public void run() {
+		for (int j = 0; j < 15; j++) {
+			System.out.println("j:"+j);
+		}
+	}
+}
+public class ThreadEx {
+	public static void main(String[] args) {
+		// 스레드 객체 생성
+		ThreadEx1 t1 =new ThreadEx1();
+//		1번방식
+//		ThreadEx1 t2 =new Thread(new ThreadEx2());
+//		2번방식
+		Runnable r = new ThreadEx2();
+		Thread t2 = new Thread(r);
+		t1.start();
+		t2.start();
+	}
+}

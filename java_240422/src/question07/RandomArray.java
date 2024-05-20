@@ -10,6 +10,9 @@ public class RandomArray {
 		int n[] = new int[a];
 		for (int i = 0; i < a; i++) {
 			n[i] = (int)(Math.random()*100)+1;
+			if (i%10 == 0) {
+				System.out.println();
+			}
 		System.out.print(n[i]+" ");
 		}
 		scanner.close();
