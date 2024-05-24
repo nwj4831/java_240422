@@ -1,8 +1,7 @@
 package question07;
 
 import java.util.Scanner;
-
-class Add{
+class Add {
 	int a,b;
 	void setValue(int a, int b) {
 		this.a=a; 
@@ -12,7 +11,7 @@ class Add{
 		return a+b;
 	}
 }
-class Sub{
+class Sub {
 	int a,b;
 	void setValue(int a, int b) {
 		this.a=a; 
@@ -22,7 +21,7 @@ class Sub{
 		return a-b;
 		}
 }
-class Mul{
+class Mul {
 	int a,b;
 	void setValue(int a, int b) {
 		this.a=a; 
@@ -39,6 +38,7 @@ class Div{
 		this.b=b;
 	}
 	int calculate() {
+		@SuppressWarnings("unused")
 		int res=0;
 		try {
 			res=a/b;
